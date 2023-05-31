@@ -4,7 +4,7 @@ import { Logger } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
 
 async function bootstrap() {
-  const PORT = process.env.API_PORT || 8080;
+  const PORT = process.env.PORT || 5000;
   const app = await NestFactory.create(AppModule);
 
   const prismaService = app.get(PrismaService);
