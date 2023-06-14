@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
-import { PrismaService } from './prisma.service';
 import { Logger } from '@nestjs/common';
+import { PrismaService } from './prisma.service';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
