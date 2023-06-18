@@ -7,11 +7,6 @@ import { UpdateShopDto } from './dto/update-shop.dto';
 export class ShopController {
   constructor(private readonly shopService: ShopService) {}
 
-  @Post()
-  create(@Body() createShopDto: CreateShopDto) {
-    return this.shopService.create(createShopDto);
-  }
-
   @Get()
   findAll() {
     return this.shopService.findAll();
@@ -20,6 +15,11 @@ export class ShopController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.shopService.findOne(+id);
+  }
+
+  @Post()
+  create(@Body() createShopDto: CreateShopDto) {
+    return this.shopService.create(createShopDto);
   }
 
   @Patch(':id')
