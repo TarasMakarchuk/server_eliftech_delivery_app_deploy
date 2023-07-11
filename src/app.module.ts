@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
+import { path } from 'app-root-path';
 import { GoodsModule } from './goods/goods.module';
 import { ShopModule } from './shop/shop.module';
 import { OrderModule } from './order/order.module';
-import { path } from 'app-root-path';
 
 @Module({
   imports: [
